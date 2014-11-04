@@ -1,0 +1,29 @@
+
+@function u($values){
+
+    $list: ();
+
+    @each $value in $values {
+
+        @if $value == 'auto' {
+            $list: append($list, $value);
+        }
+
+        @else {
+            $value : strip-units($value);
+
+            @if ($px-only) {
+                $list: append($list, $value + px);
+            }
+
+            @else {
+                $list: append($list, ($value/$font-size) + rem);
+            }
+
+        }
+
+    }
+
+    @return $list();
+
+}

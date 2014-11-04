@@ -1,0 +1,10 @@
+*.pyc
+*.swp
+*.sqlite3
+settings_local.py
+.DS_Store
+.idea/*
+#media/*
+#static/*
+node_modules/
+.sass-cache/

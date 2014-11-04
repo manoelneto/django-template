@@ -1,0 +1,26 @@
+@import 'compass';
+@import 'partials/normalize';
+@import 'partials/h5bp/base';
+
+// /* ==========================================================================
+//    Author's custom styles
+//    ========================================================================== */
+@import 'partials/global';
+@import 'partials/typography';
+
+*,
+*:before,
+*:after {
+    @include box-sizing(border-box);
+    outline: none;
+}
+
+// Media query to target devices with HD displays (like a Retina screen)
+// @media #{$hd} {
+//     .sprite-icon-top-back {
+//         background-image: $sprite-hd;
+//         background-size: image-width(sprite-path($sprite-hd))/2 image-height(sprite-path($sprite-hd))/2;
+//     }
+// }
+
+@import 'partials/h5bp/helpers';

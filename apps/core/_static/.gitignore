@@ -1,0 +1,8 @@
+.DS_Store
+.sass-cache/
+assets/vendor
+assets/js/scripts.js
+assets/js/scripts.min.js
+assets/js/modernizr.min.js
+assets/js/templates.js
+node/node_modules/

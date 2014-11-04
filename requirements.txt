@@ -1,0 +1,16 @@
+Django<1.7
+Pillow>=2.3.0
+South>=0.8.4
+gunicorn>=18.0
+Fabric>=1.8.2
+django-filer>=0.9.5
+django-suit>=0.2.6
+easy-thumbnails>=1.5
+mysql-python
+django-localflavor
+django-ckeditor-updated>=4.2.8
+django-embed-video
+django-mathfilters
+django-haystack
+elasticsearch
+djangorestframework

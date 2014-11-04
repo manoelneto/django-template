@@ -1,0 +1,1 @@
+Aqui fica os arquivos dos assets, para serem copiados para a pasta static

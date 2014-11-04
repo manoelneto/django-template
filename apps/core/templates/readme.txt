@@ -1,0 +1,1 @@
+Aqui ficam os templates que servem para todo o projeto.
