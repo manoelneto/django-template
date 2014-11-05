@@ -47,6 +47,9 @@ module.exports = function(grunt) {
                     '<%= dirs.js %>/ApplicationRouter.js',
                     '<%= dirs.js %>/utils.js',
 
+                    //generated_scripts
+                    //generated_scripts
+
                     // the final file has to be main.js
                     '<%= dirs.js %>/main.js'
                 ],
@@ -79,7 +82,7 @@ module.exports = function(grunt) {
             target: {
                 files: {
                     '<%= dirs.js %>/scripts.min.js': ['<%= dirs.js %>/scripts.js'],
-                    '<%= dirs.js %>/modernizr.min.js': ['<%= dirs.vendor %>/modernizr/modernizr.js']
+                    '<%= dirs.vendor %>/modernizr/modernizr.min.js': ['<%= dirs.vendor %>/modernizr/modernizr.js']
                 }
             }
         },
@@ -182,7 +185,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: '../assets/',
-                    src: ['css/**', 'fonts/**', 'img/**', 'js/scripts.js', 'js/scripts.min.js', 'js/modernizr.min.js'],
+                    src: ['css/**', 'fonts/**', 'img/**', 'js/scripts.js', 'js/scripts.min.js', 'vendor/modernizr/modernizr.min.js', 'vendor/modernizr/modernizr.js'],
                     dest: '../../static/core/'
                 }]
             }

@@ -11,6 +11,7 @@ urlpatterns = patterns(
     url(r'^ckeditor/', include('ckeditor.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/', include("apps.api.urls")),
+    url(r'^', include("apps.core.urls")),
 )
 
 if settings.DEBUG:

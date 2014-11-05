@@ -1,0 +1,46 @@
+{% load static from staticfiles %}
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'core/css/main.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'core/img/favicon.png' %}">
+
+    {% include 'metainfo/meta_tags.html' %}
+
+    {% if debug %}
+        <script src="{% static 'core/vendor/modernizr/modernizr.js' %}"></script>
+    {% else %}
+        <script src="{% static 'core/vendor/modernizr/modernizr.min.js' %}"></script>
+    {% endif %}
+</head>
+<body id="body">
+
+    {% block body %}
+        <div id="pages">
+            
+        </div>
+    {% endblock %}
+
+    {% if debug %}
+        <script src="{% static 'core/js/scripts.js' %}"></script>
+        <script src="//localhost:35729/livereload.js"></script>
+    {% else %}
+        <script src="{% static 'core/js/scripts.min.js' %}"></script>
+    {% endif %}
+
+    {% comment %}
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-50833481-1']);
+        _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    {% endcomment %}
+
+</body>
+</html>

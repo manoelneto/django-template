@@ -1,0 +1,73 @@
+{% load thumbnail %}
+
+{% if meta_title %}
+<title>{{ meta_title }} - Site Name</title>
+{% else %}
+<title>{% block title %}Site Title{% endblock %} - Site Name</title>
+{% endif %}
+
+{% if meta_description %}
+<meta name="description" content="{% spaceless %}{{ meta_description|striptags|truncatewords:20 }}{% endspaceless %}">
+{% else %}
+<meta name="description" content="{% spaceless %}{% block description %}Site Description{% endblock %}{% endspaceless %}">
+{% endif %}
+
+{% if meta_keywords %}
+<meta name="keywords" content="{% spaceless %}{{ meta_keywords }}{% endspaceless %}">
+{% else %}
+<meta name="keywords" content="{% spaceless %}{% block keywords %}{% endblock %}{% endspaceless %}">
+{% endif %}
+
+{% if meta_author %}
+<meta name="author" content="{% spaceless %}{{ meta_author }}{% endspaceless %}">
+{% endif %}
+
+<!-- Google Plus -->
+{% if meta_title %}
+<meta itemprop="name" content="{% spaceless %}{{ meta_title }} - Site Name{% endspaceless %}">
+{% else %}
+<meta itemprop="name" content="{% spaceless %}{% block itemprop_name %}{% endblock %} - Site Name{% endspaceless %}">
+{% endif %}
+
+{% if meta_description %}
+<meta itemprop="description" content="{% spaceless %}{{ meta_description|striptags|truncatewords:20 }}{% endspaceless %}">
+{% else %}
+<meta itemprop="description" content="{% spaceless %}{% block itemprop_description %}Site Description{% endblock %}{% endspaceless %}">
+{% endif %}
+
+{% if meta_image  %}
+<meta itemprop="image" content="{% spaceless %}http://{{ request.get_host }}{{ meta_image.url }}{% endspaceless %}">
+{% else %}
+<meta itemprop="image" content="{% spaceless %}{% block itemprop_image %}{% endblock %}{% endspaceless %}">
+{% endif %}
+
+
+<!-- Facebook -->
+{# <meta property="fb:app_id" content="247434518743637">  #}
+<meta property="og:type" content="website"> 
+<meta property="og:url" content="{{ request.build_absolute_uri }}">
+
+{% if meta_image %}
+<meta property="og:image" content="{% spaceless %}http://{{ request.get_host }}{{ meta_image.url }}{% endspaceless %}">
+{% else %}
+<meta property="og:image" content="{% spaceless %}{% block ogimage %}http://{{ request.get_host }}{{ STATIC_URL }}core/src/assets/img/facebook-default.png{% endblock %}{% endspaceless %}">
+{% endif %}
+
+{% if meta_title %}
+<meta property="og:title" content="{% spaceless %}{{ meta_title }} - Site Name{% endspaceless %}">
+{% else %}
+<meta property="og:title" content="{% spaceless %}{% block ogtitle %}Site Title{% endblock %} - Site Name{% endspaceless %}">
+{% endif %}
+
+{% if meta_description %}
+<meta property="og:description" content="{% spaceless %}{{ meta_description|striptags|truncatewords:20 }}{% endspaceless %}">
+{% else %}
+<meta property="og:description" content="{% spaceless %}{% block ogdescription %}Site Description{% endblock %}{% endspaceless %}">
+{% endif %}
+
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Site Name">
+
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{# <meta name="google-site-verification" content="NOVtYIL78EKFMUz4My1MQW_l-myZK4PWo014EtOLdmY" /> #}

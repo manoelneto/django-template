@@ -49,10 +49,12 @@ INSTALLED_APPS = (
     'filer',
     'ckeditor',
     'embed_video',
+    'easy_thumbnails',
     'easy_thumbnails.optimize',
     'rest_framework',
     # local apps
     'apps.core',
+    'apps.metainfo',
     #yeoman_apps
     #yeoman_apps
     # south here
